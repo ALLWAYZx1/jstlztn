@@ -1,127 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>JSTLSZN</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <title>JSTLSZN | Just Listen</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <style>
+    * { box-sizing: border-box; }
+
     body {
       margin: 0;
-      background: black;
+      background:
+        radial-gradient(circle at top, rgba(255, 0, 120, 0.28), transparent 35%),
+        radial-gradient(circle at bottom right, rgba(255, 180, 0, 0.22), transparent 35%),
+        #050505;
       color: white;
       font-family: Arial, sans-serif;
       text-align: center;
     }
 
-    .container {
-      padding: 80px 20px;
-      max-width: 800px;
+    .wrap {
+      max-width: 980px;
       margin: auto;
+      padding: 70px 22px;
+    }
+
+    .badge {
+      color: #ffcc33;
+      letter-spacing: 4px;
+      font-size: 12px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
     }
 
     h1 {
-      font-size: 60px;
-      letter-spacing: 10px;
+      font-size: clamp(52px, 12vw, 110px);
+      margin: 0;
+      letter-spacing: 8px;
+      line-height: 0.9;
+      text-shadow: 0 0 30px rgba(255, 0, 120, 0.55);
     }
 
     .subtitle {
-      margin-top: 10px;
+      margin-top: 18px;
       font-size: 14px;
-      color: gray;
-      letter-spacing: 4px;
+      color: #ddd;
+      letter-spacing: 5px;
+      text-transform: uppercase;
     }
 
     .tagline {
-      margin-top: 20px;
-      font-style: italic;
-      font-size: 18px;
+      margin-top: 26px;
+      font-size: 24px;
+      font-weight: bold;
     }
 
-    .section {
+    .buttons {
+      margin-top: 34px;
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    a.button {
+      color: white;
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.55);
+      padding: 13px 22px;
+      border-radius: 999px;
+      letter-spacing: 1px;
+      background: rgba(255,255,255,0.06);
+    }
+
+    a.button:hover {
+      background: white;
+      color: black;
+    }
+
+    section {
       margin-top: 80px;
+      padding: 34px 22px;
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 24px;
+      background: rgba(255,255,255,0.045);
+      backdrop-filter: blur(8px);
+    }
+
+    h2 {
+      margin-top: 0;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #ffcc33;
+    }
+
+    p {
+      color: #e7e7e7;
+      line-height: 1.7;
+      font-size: 17px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 16px;
+      margin-top: 25px;
+    }
+
+    .card {
+      padding: 20px;
+      border-radius: 18px;
+      background: rgba(0,0,0,0.38);
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .card strong {
+      color: white;
+      display: block;
+      margin-bottom: 8px;
     }
 
     iframe {
-      margin-top: 30px;
-      border-radius: 12px;
+      width: 100%;
+      border-radius: 16px;
+      margin-top: 20px;
     }
 
     .footer {
-      margin-top: 100px;
-      font-size: 12px;
-      color: gray;
-    }
-
-    button {
-      margin: 10px;
-      padding: 10px 20px;
-      background: transparent;
-      border: 1px solid white;
-      color: white;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    button:hover {
-      background: white;
-      color: black;
+      margin-top: 70px;
+      color: #aaa;
+      font-size: 13px;
+      line-height: 1.8;
     }
   </style>
 </head>
 
 <body>
+  <main class="wrap">
+    <div class="badge">Live From The Season</div>
 
-<div class="container">
+    <h1>JSTLSZN</h1>
 
-  <h1>JSTLSZN</h1>
-  <div class="subtitle">ARTIST • PRODUCER • ENGINEER</div>
-  <div class="tagline">Just Listen.</div>
+    <div class="subtitle">Artist • Producer • Engineer</div>
+    <div class="tagline">Just Listen.</div>
 
-  <div class="section">
-    <a href="https://open.spotify.com/artist/5kt7iQeJOtbuqKvspl96eh" target="_blank">
-      <button>Listen Now</button>
-    </a>
-  </div>
+    <div class="buttons">
+      <a class="button" href="https://open.spotify.com/artist/5kt7iQeJOtbuqKvspl96eh" target="_blank">Listen Now</a>
+      <a class="button" href="https://www.instagram.com/jstlszn/" target="_blank">Follow The Season</a>
+    </div>
 
-  <div class="section">
-    <p>
-      No noise. Just sound.<br><br>
-      Built through real sessions, late nights, and locked-in moments.<br>
-      Every record carries intention. Every detail matters.<br><br>
-      No shortcuts. No gimmicks.<br>
-      Just listen.
-    </p>
-  </div>
+    <section>
+      <h2>The World</h2>
+      <p>
+        From the booth to the stage, from late-night sessions to real-life moments,
+        JSTLSZN moves with sound, presence, and purpose.
+        <br><br>
+        Artist. Producer. Engineer.
+        <br>
+        Not just making records. Building a whole season.
+      </p>
+    </section>
 
-  <div class="section">
-    <h2>Listen</h2>
+    <section>
+      <h2>Sound</h2>
+      <div class="grid">
+        <div class="card"><strong>Recording</strong>Clean takes. Real energy. Locked-in moments.</div>
+        <div class="card"><strong>Production</strong>Original bounce, feeling, and direction.</div>
+        <div class="card"><strong>Engineering</strong>Clarity, punch, balance, and release-ready sound.</div>
+        <div class="card"><strong>Performance</strong>Stage presence, visuals, and connection.</div>
+      </div>
+    </section>
 
-    <iframe 
-      src="https://open.spotify.com/embed/artist/5kt7iQeJOtbuqKvspl96eh" 
-      width="100%" 
-      height="380" 
-      frameborder="0" 
-      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
-    </iframe>
-  </div>
+    <section>
+      <h2>Listen</h2>
+      <p>Press play. The rest explains itself.</p>
 
-  <div class="section">
-    <h2>Collaborations</h2>
-    <p>Omni Echelon Sounds</p>
-  </div>
+      <iframe
+        src="https://open.spotify.com/embed/artist/5kt7iQeJOtbuqKvspl96eh"
+        height="380"
+        frameborder="0"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+      </iframe>
+    </section>
 
-  <div class="section">
-    <h2>Contact</h2>
-    <p>Tap In</p>
-  </div>
+    <section>
+      <h2>Tap In</h2>
+      <p>
+        Bookings • Sessions • Collaborations
+        <br><br>
+        DM on Instagram:
+        <br>
+        @jstlszn
+      </p>
+    </section>
 
-  <div class="footer">
-    JSTLSZN — Just Listen.<br><br>
-    Built for you. Happy Birthday.
-  </div>
-
-</div>
-
+    <div class="footer">
+      JSTLSZN — Just Listen.
+      <br><br>
+      Built for you. Happy Birthday.
+    </div>
+  </main>
 </body>
 </html>
